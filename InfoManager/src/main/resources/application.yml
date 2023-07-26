@@ -1,0 +1,22 @@
+# DataSource Config
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    #设置空如何序列化
+    defaultPropertyInclusion: non_null
+  datasource:
+    username: root
+    password: 
+    url: jdbc:mysql://localhost:3306/gaokao_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  servlet:
+    context-path: /Info
+    session:
+      timeout: 36000
+  port: 9091
+  tomcat:
+    max-http-form-post-size: 104857600
